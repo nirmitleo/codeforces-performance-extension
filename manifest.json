@@ -1,0 +1,39 @@
+{
+    "manifest_version": 2,
+    "name": "Timer for CodeForces",
+    "description": "Quick launch to timer",
+    "version": "1.0.0",
+    "icon": {
+        "128": "icon_128.png"
+    },
+    "browser_action": {
+        "default_icon": "icon_128.png",
+        "default_popup": "cf-timer.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "storage",
+        "identity",
+        "activeTab"
+    ],
+    "oauth2": {
+        "client_id": "413225883468-3hgnk9alg862968h6ruaaetk4tndqioh.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/spreadsheets"
+        ]
+    },
+    "commands": {
+        "open_timer": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+S",
+                "mac": "Command+Shift+S"
+            },
+            "description": "Open timer"
+        }
+    }
+}
