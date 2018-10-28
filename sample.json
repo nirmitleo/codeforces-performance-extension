@@ -1,0 +1,31 @@
+return {
+        "data":
+            [
+                {
+                    "range": "B!E" + data.row,
+                    "values":
+                        [
+                            ["TRUE"
+                            ]
+                        ]
+                },
+                {
+                    "range": "B!F" + data.row,
+                    "values":
+                        [
+                            ["FALSE"
+                            ]
+                        ]
+                },
+                {
+                    "range": "B!G" + data.row,
+                    "values":
+                        [
+                            ["Recursion"
+                            ]
+                        ]
+                }
+            ],
+        "includeValuesInResponse": true,
+        "valueInputOption": "USER_ENTERED"
+    };

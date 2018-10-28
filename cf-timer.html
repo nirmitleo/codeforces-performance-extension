@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>
+        Random CF timer title
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        html,
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+            background-color: #222A30;
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+            background-color: #222A30;
+            color: #D3204F;
+            margin: 0px;
+        }
+
+        .icon-container {
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .icon-container:hover {
+            color: rgb(255, 149, 193);
+        }
+
+        .row {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            
+        }
+
+        #pause {
+            display: none;
+        }
+
+        input[type="checkbox"] {
+            background-color: green;
+        }
+        textarea {
+            position: relative;
+            width: 100%;
+            background-color: rgb(88, 89, 90);
+            color: rgb(255, 0, 68);
+            border: none;
+            padding: 7px;   
+            font-size: 13px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=container>
+        <div class="row">
+            <div id='hour' class="time">00</div>:
+            <div id="min" class="time">00</div>:
+            <div id="sec" class="time">00</div>
+        </div>
+        <div class="row">
+            <span id="play" class="icon-container">
+                <i class="far fa-play-circle"></i>
+            </span>
+            <span id="pause" class="icon-container">
+                <i class="far fa-pause-circle"></i>
+            </span>
+            <span id="stop" class="icon-container">
+                <i class="far fa-stop-circle"></i>
+            </span>
+            <span id="publish" class="icon-container">
+                <i class="fas fa-paper-plane"></i>
+            </span>
+        </div>
+        <div class="row" style="font-size: 13px;">
+            Try again?<input type="checkbox" id="try-again">
+            <select name="problem-type" id="problem-type" style="position: relative; width: 115px;">
+                <option id="implementation">Implementation</option>
+                <option id="dynamic-programming">Dynamic Programming</option>
+                <option id="graphs">Graphs</option>
+                <option id="recursion">Recursion</option>
+                <option id="greedy">Greedy</option>
+                <option id="binary-search">Binary Search</option>
+                <option id="tbd">TBD</option>
+            </select>
+        </div>
+        <div class="row">
+            <textarea id='comments'></textarea>
+        </div>
+        <!-- <button id='destroy-button'>Destroy Button</button>
+        <button id='create-button'>Create Button</button> -->
+    </div>
+    <script src="cf-timer.js"></script>
+</body>
+
+</html>
